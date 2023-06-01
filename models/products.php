@@ -2,12 +2,14 @@
 
 class product{
 
-    public $dogProduct;
-    public $catProduct;
+    public $ProductType;
+    public $categoria;
+    public $animale;
 
-    function __construct($dogProduct, $catProduct)
+    function __construct($ProductType, $categoria, $animale)
     {
-        $this->dogProduct = $dogProduct;
-        $this->catProduct = $catProduct;
+        $this->ProductType = $ProductType;
+        $this->categoria = $categoria;
+        $this->animale = $animale;
     }
 }

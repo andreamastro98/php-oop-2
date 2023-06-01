@@ -2,12 +2,12 @@
 
 class ProductType{
 
-    public $prodottoAlimentare;
-    public $prodottoNonAlimentare;
+    public $nomeProdotto;
+    public $prezzo;
 
-    function __construct($prodottoAlimentare, $prodottoNonAlimentare)
+    function __construct($nomeProdotto, $prezzo)
     {
-        $this->prodottoAlimentare = $prodottoAlimentare;
-        $this->prodottoNonAlimentare = $prodottoNonAlimentare;
+        $this->nomeProdotto = $nomeProdotto;
+        $this->prezzo = $prezzo;
     }
 }

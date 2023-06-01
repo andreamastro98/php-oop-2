@@ -2,12 +2,11 @@
 
 class animale{
 
-    public $cane;
-    public $gatto;
+    public $nomeAnimale;
 
-    function __construct($cane, $gatto)
+
+    function __construct($nomeAnimale)
     {
-        $this->cane = $cane;
-        $this->gatto = $gatto;
+        $this->nomeAnimale = $nomeAnimale;
     }
 }

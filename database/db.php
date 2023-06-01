@@ -4,8 +4,8 @@ require_once __DIR__ . '/../models/products.php';
 require_once __DIR__ . '/../models/productType.php';
 require_once __DIR__ . '/../models/animale.php';
 
-$cane = new animale('cane');
-$gatto = new animale('gatto');
+$cane = new animale('fa-dog');
+$gatto = new animale('fa-cat');
 $croccantini = new productType('croccatini','7$');
 $osso = new productType('osso', '20$');
 $gomitolo = new productType('gomitolo', '10$');
@@ -21,5 +21,5 @@ $arrayProducts = [
     new product([$cuccia], 'gioco', [$cane]),
 ];
 
-var_dump($arrayProducts)
+// var_dump($arrayProducts[0])
 ?>

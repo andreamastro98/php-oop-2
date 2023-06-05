@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/database/db.php';
+require_once __DIR__ . '/models/traits/expiration.php'
 
 
 ?>
@@ -34,11 +35,17 @@ require_once __DIR__ . '/database/db.php';
                 <img src="https://images.unsplash.com/photo-1597843786411-a7fa8ad44a95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h3 class="card-title"><?php echo $elem->ProductType[0]->nomeProdotto ?></h3>
-                    <h5 class="card-text">Categoria: <?php echo $elem->categoria ?></h5>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="card-text">Prezzo: <?php echo $elem->ProductType[0]->prezzo ?></span>
-                        <i class="fa-solid round <?php echo $elem->animale[0]->nomeAnimale ?>"></i>
-                    </div>                    
+                    <h4 class="card-text">Categoria: <?php echo $elem->categoria ?></h4>
+
+                    <?php if ($elem->ProductType[0]->expiration != NULL) { ?>
+                        <h5 class="card-text">Scadenza: <?php echo $elem->ProductType[0]->expiration ?></h5>                       
+                    <?php } ?>
+
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="card-text">Prezzo: <?php echo $elem->ProductType[0]->prezzo ?></span>
+                            <i class="fa-solid round <?php echo $elem->animale[0]->nomeAnimale ?>"></i>
+                        </div>
                 </div>
             </div>
         <?php } ?>
